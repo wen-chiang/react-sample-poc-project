@@ -24,6 +24,15 @@ Complete guide to your React project's build ecosystem configuration.
 ### **I want to see the complete configuration map**
 → Read [ECOSYSTEM_MAP.md](ECOSYSTEM_MAP.md) - Visual guide to how everything connects
 
+### **NEW: I want multi-environment code design**
+→ Read [MULTIENV_QUICK_START.md](MULTIENV_QUICK_REFERENCE.md) - Quick patterns and reference
+
+### **NEW: I need environment secrets management**
+→ Check [SECRETS_MANAGEMENT.md](SECRETS_MANAGEMENT.md) - How to handle secrets securely
+
+### **NEW: I want different code per environment**
+→ Read [MULTIENV_IMPLEMENTATION.md](MULTIENV_IMPLEMENTATION.md) - Copy-paste ready examples
+
 ---
 
 ## 📖 Documentation Files
@@ -83,6 +92,87 @@ Complete guide to your React project's build ecosystem configuration.
 
 ---
 
+## 🆕 Multi-Environment Code Design
+
+### 7. **SECRETS_MANAGEMENT.md** - Secrets Handling Guide
+**Length:** Very Long | **Best for:** Security best practices
+- How environment variables work
+- Local development with secrets
+- Different environment strategies
+- CI/CD secrets integration
+- Production deployment
+- Security considerations
+- Common mistakes
+
+### 8. **ENVIRONMENT_PROFILES.md** - Multi-Environment Setup
+**Length:** Very Long | **Best for:** Complete working example
+- Step-by-step implementation
+- Configuration module creation
+- Mock vs real API
+- CI/CD integration (GitHub, Vercel, Netlify)
+- Testing different environments
+- Working code examples
+
+### 9. **ENVIRONMENT_QUICK_START.md** - 5-Minute Setup
+**Length:** Medium | **Best for:** Quick implementation
+- Short answer to common question
+- 5-minute setup guide
+- Real-world example
+- Troubleshooting tips
+- Security best practices
+
+### 10. **ENVIRONMENT_VISUAL_GUIDE.md** - Diagrams & Flows
+**Length:** Medium | **Best for:** Visual learners
+- High-level architecture
+- Scenario comparisons
+- Environment variable flow
+- Build-time vs runtime
+- Security overview
+- Decision trees
+
+### 11. **MULTIENV_QUICK_REFERENCE.md** - Cheat Sheet
+**Length:** Short | **Best for:** Quick lookup
+- Quick patterns
+- Configuration values
+- Environment behavior table
+- File checklist
+- Commands reference
+- Common mistakes
+
+### 12. **MULTIENV_CODE_DESIGN.md** - Design Patterns
+**Length:** Very Long | **Best for:** Understanding architecture
+- Multi-env design overview
+- Environment-specific implementations
+- Mock APIs for development
+- Feature flags
+- Environment-aware components
+- Environment-aware hooks
+- Complete example
+
+### 13. **MULTIENV_IMPLEMENTATION.md** - Copy-Paste Ready Code
+**Length:** Very Long | **Best for:** Implementation
+- Ready-to-use code modules
+- Config module
+- Mock data
+- Mock service
+- Environment hooks
+- Debug panel
+- Updated components
+- Running different environments
+
+### 14. **MULTIENV_ARCHITECTURE.md** - Visual Architecture
+**Length:** Long | **Best for:** Understanding system design
+- Architecture diagram
+- Data flow (dev vs prod)
+- File dependency graph
+- Configuration flow
+- Environment comparison
+- Request flow comparison
+- Conditional rendering patterns
+- Benefit summary
+
+---
+
 ## 🗂️ Configuration Files Reference
 
 ### Environment Configuration
@@ -128,6 +218,17 @@ postcss.config.js      CSS processing pipeline
 src/setupTests.js      Jest test setup
 __mocks__/fileMock.js  Mock for image/file imports
 .gitignore             Git ignore patterns
+```
+
+### 🆕 Multi-Environment Code Files (Optional - to create)
+```
+src/config/index.js                  Environment config module
+src/services/BookService.js          Service with mock/real logic
+src/services/mocks/bookMocks.js      Mock data for development
+src/hooks/useEnvironment.js          Environment info hook
+src/hooks/useLogger.js               Logging hook
+src/components/DebugPanel.jsx        Debug UI (dev-only)
+```
 ```
 
 ---
