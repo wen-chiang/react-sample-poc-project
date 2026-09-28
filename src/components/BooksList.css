@@ -1,0 +1,123 @@
+.books-container {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.books-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.books-header h2 {
+  color: #333;
+  font-size: 24px;
+}
+
+.refresh-btn {
+  background-color: #667eea;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.refresh-btn:hover {
+  background-color: #5568d3;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  background: #fafafa;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+}
+
+.book-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.book-card h3 {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.book-card p {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.book-card .author {
+  font-weight: 600;
+  color: #764ba2;
+}
+
+.book-card .isbn,
+.book-card .year {
+  font-size: 13px;
+  color: #888;
+}
+
+.no-books {
+  text-align: center;
+  color: #999;
+  padding: 40px 20px;
+  font-size: 16px;
+}
+
+.error-message {
+  background-color: #fee;
+  border: 1px solid #fcc;
+  padding: 15px;
+  border-radius: 4px;
+  color: #c33;
+}
+
+.error-message button {
+  margin-top: 10px;
+  background-color: #c33;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.error-message button:hover {
+  background-color: #a22;
+}
+
+@media (max-width: 768px) {
+  .books-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .books-header {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .refresh-btn {
+    align-self: flex-end;
+  }
+}
